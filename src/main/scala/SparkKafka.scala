@@ -8,6 +8,7 @@ object SparkKafka extends App {
     .builder()
     .master("local[*]")
     .getOrCreate()
+
   val message = spark
     .readStream
     .format("kafka")
